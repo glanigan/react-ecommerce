@@ -8,7 +8,7 @@ import Appbar from '../components/Appbar/Appbar'
 const Pages = () =>(
     <>
     <Appbar/>
-    <div style={{margin:'50px 0 0 0'}}>
+    <div style={{margin:'80px 20px 20px'}}>
     <Switch>
         <Route path={routes.LISTING.path} component={Listing}/>
     </Switch>

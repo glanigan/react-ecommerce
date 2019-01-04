@@ -1,7 +1,7 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
 
+import '../../index.css'
 import { Icon,iconTypes } from './Icon'
 
 storiesOf('Core Components/Icon', module)
@@ -9,7 +9,6 @@ storiesOf('Core Components/Icon', module)
 
 const Icons = () =>(
     <React.Fragment>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"/>
         {
             Object.keys(iconTypes)
             .map(iconType => (

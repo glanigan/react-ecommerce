@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://use.fontawesome.com/releases/v5.6.1/css/all.css');
+
 *{
     color:#333;
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+
+    padding:0;
+    margin:0;
 }
 body{
     width:100vw;
     max-width:100vw;
     height:100vh;
     overflow-x:hidden;
-    
+
     padding:0;
     margin:0;
 
@@ -15,6 +23,9 @@ body{
 h1{
     color:#fff;
 }
+h1,h2,h3,h4{
+    margin:5px 0;
+}
 button{
     width:auto;
 
@@ -22,11 +33,16 @@ button{
     margin:5px;
 
     color:#fff;
-    background: orange;
+    background: #fdaf1c;
     border: solid 1px #fff;
     border-radius: 6px;
 
     cursor: pointer;
+
+    font-weight:600;
+}
+button:hover{
+    background: #ffbd67;
 }
 .App{
     max-width:100vw;

@@ -1,18 +1,22 @@
 import styled from 'styled-components'
 import React from 'react'
+import {connect} from 'react-redux'
 
 import Basket from '../Basket/Basket'
 import Row from '../Layouts/Row'
 
-const Appbar = () =>(
+const Appbar = ({basket}) =>(
     <AppbarContainer>
-        <Row align="space-between" margin="0 10px">
-            <h1>React-Ecom</h1>
-            <Basket noItems={0}/>
+        <Row align="space-between" margin="10px">
+            <h1>React-ECOM</h1>
+            <Basket {...basket}/>
         </Row>
     </AppbarContainer>
 )
-export default Appbar
+const mapStateToProps = (state) =>({
+    basket: state.basket
+})
+export default connect(mapStateToProps,null)(Appbar)
 
 export const AppbarContainer = styled.header`
     
