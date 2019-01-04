@@ -10,7 +10,15 @@ const actions = {
 }
 
 export const addItem = (item) => ({type: actions.ADD,payload: {item:item}})
+
 export const removeItem = (item) => ({type: actions.REMOVE,payload: {item:item}})
+
+//TODO
+export const applyOffer = (offer) => ({})
+
+//TODO
+export const reset = () => ({})
+
 
 function basketReducer(state = initialState, action){
     switch(action.type){
@@ -32,4 +40,5 @@ function basketReducer(state = initialState, action){
             return state;
     }
 }
+
 export default basketReducer

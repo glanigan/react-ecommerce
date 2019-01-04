@@ -5,6 +5,8 @@ import {Icon} from '../Icon/Icon'
 import Column from '../Layouts/Column'
 import Row from '../Layouts/Row'
 
+import {BasketItem} from './BasketItem'
+
 const Badge = styled.span`
     position:relative;
     top:0px;
@@ -99,10 +101,12 @@ const BasketMenuContainer = styled(Column)`
 
     }
 `
-const BasketMenu = ({show,noItems = 0,totalCost = 0.00}) =>(
+const BasketMenu = ({show,items,noItems = 0,totalCost = 0.00}) =>(
     <BasketMenuContainer show={show}>
         <h4>{`${noItems} Item in Basket`}</h4>
-        { noItems === 0 && <h4>Your Basket is Empty <span role="img" aria-label="Sad face">&#128532;</span></h4> }
+        { noItems != 0 
+        ? items.map(item => <BasketItem key={item.id} {...item}/>)
+        : <h4>Your Basket is Empty <span role="img" aria-label="Sad face">&#128532;</span></h4> }
         <h4>{`TOTAL COST: £${totalCost}`}</h4>
         <Row>
             <button>VIEW / EDIT BASKET</button>
