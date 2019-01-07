@@ -31,3 +31,7 @@ export const ProductCard = ({id,cover,name,cost,options,addItem}) =>(
         </div>
     </CardContainer>
 )
+
+ProductCard.defaultProps = {
+    cover: 'https://via.placeholder.com/300x240'
+}

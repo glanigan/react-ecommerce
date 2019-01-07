@@ -11,7 +11,7 @@ import {
 
 const Listing = (props) =>{
     return(
-        <Row>
+        <Row style={{flexWrap: 'wrap',justifyContent:'center'}}>
             {ProductList.map(item => (
                 <ProductCard 
                     key={item.id} 
