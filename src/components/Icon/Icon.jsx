@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
 export const iconTypes = {
-    'user':'fas fa-user',
-    'users':'fas fa-users',
+    user:'fas fa-user',
+    users:'fas fa-users',
     basket:'fas fa-shopping-basket',
-    'email':'far fa-envelope',
+    email:'far fa-envelope',
+    'plus-circle':'fas fa-plus-circle'
 }
 
 export const Icon = styled.i.attrs(({type}) =>({ 
