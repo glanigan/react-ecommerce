@@ -22,7 +22,7 @@ export const ProductCard = ({id,cover,name,cost,options,addItem}) =>(
         <img src={cover} alt="Product" width="300" height="200"/>
         <div>
             <h4>{name}</h4>
-            <span>{`£${cost}`}</span>
+            <span>{`£${cost.toFixed(2)}`}</span>
             {
                 options &&
                 "Item has options"
