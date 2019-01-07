@@ -5,7 +5,7 @@ import {Icon} from '../Icon/Icon'
 
 const CardContainer = styled.div`
     width:300px;
-    height:400px;
+    height:420px;
 
     margin: 5px;
 
@@ -19,19 +19,24 @@ const CardContainer = styled.div`
 
 export const ProductCard = ({id,cover,name,cost,options,addItem}) =>(
     <CardContainer>
-        <img src={cover} alt="Product" width="300" height="200"/>
         <div>
+        <img src={cover} alt="Product" width="300" height="320"/>
+        </div>
+        <div style={{padding:10}}>
             <h4>{name}</h4>
             <span>{`£${cost.toFixed(2)}`}</span>
             {
                 options &&
                 "Item has options"
             }
-            <button onClick={addItem}><Icon type="plus-circle" color='#fff'/></button>
+            <Icon onClick={addItem} type="plus-circle" color='#fdaf1c'/>
         </div>
     </CardContainer>
 )
 
 ProductCard.defaultProps = {
-    cover: 'https://via.placeholder.com/300x240?text=Image not found'
+    cover: 'https://via.placeholder.com/300x320/?text=Image not found',
+    name: 'Product Not Found',
+    cost: 0,
+    options: null,
 }
