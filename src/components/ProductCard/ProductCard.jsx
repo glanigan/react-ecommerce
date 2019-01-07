@@ -33,5 +33,5 @@ export const ProductCard = ({id,cover,name,cost,options,addItem}) =>(
 )
 
 ProductCard.defaultProps = {
-    cover: 'https://via.placeholder.com/300x240'
+    cover: 'https://via.placeholder.com/300x240?text=Image not found'
 }

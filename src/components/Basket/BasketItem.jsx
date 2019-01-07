@@ -14,5 +14,5 @@ export const BasketItem = ({cover,name,cost,quantity = 1}) =>(
     </Row>
 )
 BasketItem.defaultProps = {
-    cover: 'https://via.placeholder.com/60x80'
+    cover: 'https://via.placeholder.com/60x80?text=Image not found'
 }
